@@ -25,6 +25,7 @@ concurrency:
 # Default to bash
 defaults:
   run:
+      working-directory: ./atscale
       shell: bash
 
 jobs:
@@ -58,12 +59,10 @@ jobs:
                 --gc \
                 --minify \
                 --baseURL "${{ steps.pages.outputs.base_url }}/"
-          working-directory: ./atscale
         - name: Upload artifact
-          uses: actions/upload-pages-artifact@v1
+          uses: actions/upload-pages-artifact@v3
           with:
             path: ./public
-          working-directory: ./atscale
 
   # Deployment job
   deploy:
