@@ -1,0 +1,3 @@
+[submodule "atscale/themes/lotusdocs"]
+	path = atscale/themes/lotusdocs
+	url = https://github.com/colinwilson/lotusdocs
